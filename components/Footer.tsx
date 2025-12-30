@@ -32,7 +32,7 @@ export default function Footer() {
                             <Link href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
                                 <Twitter size={18} />
                             </Link>
-                            <Link href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+                            <Link href="https://www.linkedin.com/company/2tds/" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
                                 <Linkedin size={18} />
                             </Link>
                         </div>
@@ -77,11 +77,11 @@ export default function Footer() {
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3">
                                 <MapPin className="text-primary shrink-0 mt-1" size={18} />
-                                <span className="text-sm">Touba, Secteur Industriel, Sénégal</span>
+                                <span className="text-sm">Cité Fadia,Parcelle, Sénégal</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone className="text-primary shrink-0" size={18} />
-                                <span className="text-sm">+221 33 XXX XX XX</span>
+                                <span className="text-sm">+221 77 XXX XX XX</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Mail className="text-primary shrink-0" size={18} />

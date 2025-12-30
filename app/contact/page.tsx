@@ -21,7 +21,7 @@ export default function Contact() {
     return (
         <div className="flex flex-col gap-12 pb-24 overflow-hidden">
             {/* Hero Contact Premium */}
-            <section className="relative py-24 overflow-hidden bg-slate-50 dark:bg-slate-900/40 transition-colors">
+            <section className="relative py-24 overflow-hidden bg-muted/30 transition-colors">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl">
                     <div className="absolute top-10 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float" />
                     <div className="absolute bottom-10 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
@@ -45,7 +45,7 @@ export default function Contact() {
                     {/* Formulaire Card */}
                     <div className="flex-[2]">
                         <ScrollReveal y={50} delay={0.2}>
-                            <div className="bg-white dark:bg-zinc-900/80 rounded-[2rem] shadow-2xl shadow-primary/5 border border-border/50 dark:border-white/5 overflow-hidden backdrop-blur-sm">
+                            <div className="bg-card rounded-[2rem] shadow-2xl shadow-primary/5 border border-border/50 overflow-hidden backdrop-blur-sm">
                                 <div className="p-8 md:p-12">
                                     <h2 className="text-3xl font-bold mb-8 flex items-center gap-3">
                                         <span className="w-1.5 h-8 bg-primary rounded-full" />
@@ -55,28 +55,28 @@ export default function Contact() {
                                     <form onSubmit={handleSubmit} className="space-y-8">
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                             <div className="group space-y-2">
-                                                <label htmlFor="name" className="text-sm font-bold text-foreground/70 dark:text-zinc-400 group-focus-within:text-primary transition-colors">
+                                                <label htmlFor="name" className="text-sm font-bold text-muted-foreground group-focus-within:text-primary transition-colors">
                                                     Nom complet
                                                 </label>
                                                 <input
                                                     type="text"
                                                     id="name"
                                                     required
-                                                    className="w-full p-4 rounded-2xl bg-secondary/50 dark:bg-zinc-800/50 border border-transparent focus:border-primary/30 focus:bg-white dark:focus:bg-zinc-800 focus:ring-4 focus:ring-primary/5 outline-none transition-all placeholder:text-muted-foreground/50"
+                                                    className="w-full p-4 rounded-2xl bg-muted/50 border border-transparent focus:border-primary/30 focus:bg-background focus:ring-4 focus:ring-primary/5 outline-none transition-all placeholder:text-muted-foreground/50"
                                                     placeholder="Jean Dupont"
                                                     value={formData.name}
                                                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                                 />
                                             </div>
                                             <div className="group space-y-2">
-                                                <label htmlFor="email" className="text-sm font-bold text-foreground/70 dark:text-zinc-400 group-focus-within:text-primary transition-colors">
+                                                <label htmlFor="email" className="text-sm font-bold text-muted-foreground group-focus-within:text-primary transition-colors">
                                                     Adresse Email
                                                 </label>
                                                 <input
                                                     type="email"
                                                     id="email"
                                                     required
-                                                    className="w-full p-4 rounded-2xl bg-secondary/50 dark:bg-zinc-800/50 border border-transparent focus:border-primary/30 focus:bg-white dark:focus:bg-zinc-800 focus:ring-4 focus:ring-primary/5 outline-none transition-all placeholder:text-muted-foreground/50"
+                                                    className="w-full p-4 rounded-2xl bg-muted/50 border border-transparent focus:border-primary/30 focus:bg-background focus:ring-4 focus:ring-primary/5 outline-none transition-all placeholder:text-muted-foreground/50"
                                                     placeholder="jean@exemple.com"
                                                     value={formData.email}
                                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -85,22 +85,22 @@ export default function Contact() {
                                         </div>
 
                                         <div className="group space-y-2">
-                                            <label htmlFor="subject" className="text-sm font-bold text-foreground/70 dark:text-zinc-400 group-focus-within:text-primary transition-colors">
+                                            <label htmlFor="subject" className="text-sm font-bold text-muted-foreground group-focus-within:text-primary transition-colors">
                                                 Sujet de discussion
                                             </label>
                                             <div className="relative">
                                                 <select
                                                     id="subject"
                                                     required
-                                                    className="w-full p-4 rounded-2xl bg-secondary/50 dark:bg-zinc-800/50 border border-transparent focus:border-primary/30 focus:bg-white dark:focus:bg-zinc-800 focus:ring-4 focus:ring-primary/5 outline-none transition-all appearance-none"
+                                                    className="w-full p-4 rounded-2xl bg-muted/50 border border-transparent focus:border-primary/30 focus:bg-background focus:ring-4 focus:ring-primary/5 outline-none transition-all appearance-none"
                                                     value={formData.subject}
                                                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                                                 >
-                                                    <option value="" disabled className="dark:text-zinc-500">Sélectionnez un sujet</option>
-                                                    <option value="web" className="dark:text-zinc-300">Développement Web</option>
-                                                    <option value="mobile" className="dark:text-zinc-300">Application Mobile</option>
-                                                    <option value="cloud" className="dark:text-zinc-300">Solutions Cloud</option>
-                                                    <option value="other" className="dark:text-zinc-300">Autre demande</option>
+                                                    <option value="" disabled>Sélectionnez un sujet</option>
+                                                    <option value="web">Développement Web</option>
+                                                    <option value="mobile">Application Mobile</option>
+                                                    <option value="cloud">Solutions Cloud</option>
+                                                    <option value="other">Autre demande</option>
                                                 </select>
                                                 <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none opacity-50">
                                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
@@ -109,14 +109,14 @@ export default function Contact() {
                                         </div>
 
                                         <div className="group space-y-2">
-                                            <label htmlFor="message" className="text-sm font-bold text-foreground/70 dark:text-zinc-400 group-focus-within:text-primary transition-colors">
+                                            <label htmlFor="message" className="text-sm font-bold text-muted-foreground group-focus-within:text-primary transition-colors">
                                                 Votre Message
                                             </label>
                                             <textarea
                                                 id="message"
                                                 required
                                                 rows={5}
-                                                className="w-full p-4 rounded-2xl bg-secondary/50 dark:bg-zinc-800/50 border border-transparent focus:border-primary/30 focus:bg-white dark:focus:bg-zinc-800 focus:ring-4 focus:ring-primary/5 outline-none transition-all resize-none placeholder:text-muted-foreground/50"
+                                                className="w-full p-4 rounded-2xl bg-muted/50 border border-transparent focus:border-primary/30 focus:bg-background focus:ring-4 focus:ring-primary/5 outline-none transition-all resize-none placeholder:text-muted-foreground/50"
                                                 placeholder="Dites-nous en plus sur votre vision..."
                                                 value={formData.message}
                                                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
