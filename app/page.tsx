@@ -41,19 +41,19 @@ export default function Home() {
                         </div>
                         <div className="flex-1 relative">
                             <ScrollReveal delay={0.5} y={0} x={40}>
-                                <div className="relative z-10 rounded-full overflow-hidden shadow-2xl border-4 border-white dark:border-zinc-800 w-64 h-64 mx-auto">
+                                <div className="relative z-10 rounded-full transition-all duration-700 animate-float overflow-hidden shadow-2xl border-4 border-white dark:border-zinc-800 w-64 h-64 mx-auto">
                                     <div className="w-full h-full bg-white flex items-center justify-center">
                                         <Image
                                             src="/logo.png"
                                             alt="2TDS Hero"
                                             width={250}
                                             height={250}
-                                            className="opacity-90 transition-all duration-700 animate-float"
+                                            className="opacity-90 "
                                         />
                                     </div>
                                 </div>
-                                <div className="absolute -bottom-6 -left-6 bg-white dark:bg-card p-6 rounded-2xl shadow-xl border border-border glass animate-bounce-subtle z-20">
-                                    <div className="flex items-center gap-4">
+                                <div className="absolute -bottom-6 left-1/4 -translate-x-1/2 bg-white dark:bg-card p-6 rounded-2xl shadow-xl border border-border glass animate-bounce-subtle z-5">
+                                    <div className="flex items-center gap-4 mr-8">
                                         <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary">
                                             <CheckCircle2 className="w-6 h-6" />
                                         </div>

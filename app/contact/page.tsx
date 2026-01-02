@@ -157,7 +157,7 @@ export default function Contact() {
                                         </div>
                                         <div>
                                             <p className="text-white/60 text-xs font-bold uppercase tracking-wider">Localisation</p>
-                                            <p className="font-semibold text-lg">Touba, Sénégal</p>
+                                            <p className="font-semibold text-lg">Cité Fadia,Parcelle, Sénégal</p>
                                         </div>
                                     </div>
                                 </div>
