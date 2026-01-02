@@ -33,6 +33,8 @@ jobs:
       run: |
         lftp -c "
         set ftp:ssl-allow no
+        set ftp:passive-mode true
+        set ftp:list-options -a
         open -u $FTP_USER,$FTP_PASSWORD $FTP_HOST
-        mirror -R out $FTP_PATH --delete --verbose
+        mirror -R out $FTP_PATH --delete --verbose --exclude .htaccess
         "
