@@ -32,14 +32,14 @@ export default function About() {
                     </div>
                     <div className="flex-1">
                         <ScrollReveal x={50} delay={0.4}>
-                            <div className="bg-accent rounded-3xl p-12 flex items-center justify-center">
-                                <div className="bg-white rounded-full p-8 shadow-xl aspect-square flex items-center justify-center">
+                            <div className="bg-accent rounded-3xl p-12 flex items-center justify-center animate-float">
+                                <div className="bg-red rounded-full  shadow-xl aspect-square flex items-center justify-center">
                                     <Image
                                         src="/logo.png"
                                         alt="2TDS Mission"
                                         width={250}
                                         height={250}
-                                        className="drop-shadow-2xl animate-float"
+                                        className="drop-shadow-2xl"
                                     />
                                 </div>
                             </div>

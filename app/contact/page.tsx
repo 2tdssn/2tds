@@ -63,7 +63,7 @@ export default function Contact() {
                                                     id="name"
                                                     required
                                                     className="w-full p-4 rounded-2xl bg-muted/50 border border-transparent focus:border-primary/30 focus:bg-background focus:ring-4 focus:ring-primary/5 outline-none transition-all placeholder:text-muted-foreground/50"
-                                                    placeholder="Jean Dupont"
+                                                    placeholder="Abdoulaye Ndiaye"
                                                     value={formData.name}
                                                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                                 />
@@ -77,7 +77,7 @@ export default function Contact() {
                                                     id="email"
                                                     required
                                                     className="w-full p-4 rounded-2xl bg-muted/50 border border-transparent focus:border-primary/30 focus:bg-background focus:ring-4 focus:ring-primary/5 outline-none transition-all placeholder:text-muted-foreground/50"
-                                                    placeholder="jean@exemple.com"
+                                                    placeholder="abdoulaye@exemple.sn"
                                                     value={formData.email}
                                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                                 />

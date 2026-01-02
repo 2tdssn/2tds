@@ -42,7 +42,7 @@ export default function Home() {
                         <div className="flex-1 relative">
                             <ScrollReveal delay={0.5} y={0} x={40}>
                                 <div className="relative z-10 rounded-full transition-all duration-700 animate-float overflow-hidden shadow-2xl border-4 border-white dark:border-zinc-800 w-64 h-64 mx-auto">
-                                    <div className="w-full h-full bg-white flex items-center justify-center">
+                                    <div className="w-full h-full flex items-center justify-center">
                                         <Image
                                             src="/logo.png"
                                             alt="2TDS Hero"
@@ -75,9 +75,9 @@ export default function Home() {
                     <StaggerContainer>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                             {[
-                                { label: "Projets Réalisés", value: "50+" },
-                                { label: "Clients Satisfaits", value: "30+" },
-                                { label: "Expertise Senior", value: "10 Ans" },
+                                { label: "Projets Réalisés", value: "0+" },
+                                { label: "Clients Satisfaits", value: "0+" },
+                                { label: "Expertise Senior", value: "0 Ans" },
                                 { label: "Disponibilité", value: "24/7" },
                             ].map((stat, i) => (
                                 <StaggerItem key={i}>

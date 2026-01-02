@@ -1,26 +1,41 @@
-name: Deploy to cPanel
+name: Deploy Next.js to cPanel
 
 on:
   push:
     branches:
-      - main  # Déclenchement à chaque push sur main
+      - main
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build Next.js
+      run: npm run build
 
     - name: Install lftp
       run: sudo apt-get update && sudo apt-get install -y lftp
 
-    - name: Deploy via FTP
+    - name: Deploy to cPanel (FTP)
       env:
         FTP_HOST: ${{ secrets.FTP_HOST }}
         FTP_USER: ${{ secrets.FTP_USER }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         FTP_PATH: ${{ secrets.FTP_PATH }}
       run: |
-        lftp -c "set ftp:ssl-allow no; open -u $FTP_USER,$FTP_PASSWORD $FTP_HOST; mirror -R ./ $FTP_PATH --delete --verbose"
+        lftp -c "
+        set ftp:ssl-allow no
+        open -u $FTP_USER,$FTP_PASSWORD $FTP_HOST
+        mirror -R out $FTP_PATH --delete --verbose
+        "
